@@ -1,0 +1,63 @@
+:root {
+  /* กำหนดตัวแปรสีสำหรับโทนเทาขาว */
+  --color-white: #ffffff;
+  --color-light-gray: #f0f0f0;
+  --color-medium-gray: #888888;
+  --color-dark-gray: #333333;
+}
+
+body {
+  background-color: var(--color-light-gray); /* พื้นหลังสีเทาอ่อน */
+  color: var(--color-dark-gray); /* ข้อความสีเทาเข้ม */
+  font-family: Arial, sans-serif; /* เปลี่ยนฟอนต์ให้ดูเรียบง่ายขึ้น */
+}
+
+#root {
+  max-width: 1400px; /* ขยายความกว้างสูงสุดเล็กน้อย */
+  margin: 0 auto;
+  padding: 3rem 2rem; /* เพิ่ม padding เล็กน้อยเพื่อให้ดูมีพื้นที่หายใจ */
+  text-align: center;
+}
+
+.logo {
+  height: 8em; /* เพิ่มขนาดโลโก้เล็กน้อย */
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms ease-in-out; /* ปรับ transition ให้ดูนุ่มนวลขึ้น */
+}
+
+.logo:hover {
+  filter: drop-shadow(0 0 1.5em rgba(100, 108, 255, 0.5)); /* ปรับเงาให้ดูโปร่งและนุ่มนวลขึ้น */
+}
+
+.logo.react:hover {
+  filter: drop-shadow(0 0 1.5em rgba(97, 218, 251, 0.5)); /* ปรับเงาสำหรับโลโก้ React */
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  background-color: var(--color-white); /* พื้นหลังการ์ดเป็นสีขาว */
+  border-radius: 12px; /* เพิ่มขอบมน */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* เพิ่มเงาให้ดูมีมิติ */
+  padding: 2.5em; /* เพิ่ม padding ในการ์ด */
+}
+
+.read-the-docs {
+  color: var(--color-medium-gray); /* สีข้อความ "read the docs" */
+  font-style: italic; /* ทำตัวเอียงให้ดูน่าสนใจขึ้น */
+  margin-top: 1rem;
+}
